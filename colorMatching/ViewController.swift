@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var yesButton: UIButton!
+    @IBOutlet weak var noButton: UIButton!
     
     enum Color: CaseIterable {
         case red
@@ -30,6 +32,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        wordLabel.layer.cornerRadius = 10.0
+        colorLabel.layer.cornerRadius = 10.0
+        yesButton.layer.cornerRadius = 10.0
+        noButton.layer.cornerRadius = 10.0
         setLabels()
     }
 

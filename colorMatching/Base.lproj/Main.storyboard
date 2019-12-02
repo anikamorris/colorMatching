@@ -39,7 +39,9 @@
                                             <constraint firstAttribute="height" constant="30" id="t7n-4J-XRg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                        <state key="normal" title="||"/>
+                                        <state key="normal" title="||">
+                                            <color key="titleColor" red="0.0" green="0.3529411764705882" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -88,15 +90,15 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOH-I9-ZMe">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="105"/>
-                                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                        <color key="backgroundColor" red="1" green="0.87450980392156863" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7o-W3-iZ6">
                                         <rect key="frame" x="0.0" y="152" width="275" height="105"/>
-                                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                        <color key="backgroundColor" red="1" green="0.87450980392156863" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -106,7 +108,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.26666666666666666" green="0.61960784313725492" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BMJ-uJ-Zo2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="1mY-cP-ONk"/>
                             <constraint firstItem="NaE-3B-IZH" firstAttribute="top" secondItem="Xyj-48-gSX" secondAttribute="bottom" constant="75" id="FVd-0o-cqJ"/>
@@ -127,10 +129,12 @@
                     </view>
                     <connections>
                         <outlet property="colorLabel" destination="v7o-W3-iZ6" id="eMj-OD-zWB"/>
+                        <outlet property="noButton" destination="gHs-rO-AA1" id="iW3-TD-ijR"/>
                         <outlet property="pauseButton" destination="3Mw-OM-pTw" id="2ad-in-A4M"/>
                         <outlet property="scoreLabel" destination="Laj-SG-bwM" id="raa-4F-HKh"/>
                         <outlet property="timeLabel" destination="AGQ-5w-nfA" id="fjh-Lb-sea"/>
                         <outlet property="wordLabel" destination="uOH-I9-ZMe" id="aCC-xT-FUr"/>
+                        <outlet property="yesButton" destination="ndY-g5-qCk" id="8sn-5Z-hEM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
