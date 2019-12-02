@@ -30,25 +30,26 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        setLabels()
     }
 
     @IBAction func yesButtonTapped(_ sender: Any) {
+        setLabels()
     }
     
     @IBAction func noButtonTapped(_ sender: Any) {
+        setLabels()
     }
     
-    func setTextColors() {
+    func setTextColors(label: UILabel) {
         // Get a random color
         let color1 = randomColor()
-        // Set wordLabel text to random color
-        wordLabel.text = whichColor(color: color1)
+        // Set label text to random color
+        label.text = whichColor(color: color1)
         // Get another random color
         let color2 = randomColor()
-        // Set wordLabel text color to random color
-        wordLabel.textColor = color2.rawValue
-        // Do the same for colorLabel
+        // Set label text color to second random color
+        label.textColor = color2.rawValue
     }
     
     func randomColor() -> ViewController.Color {
@@ -66,6 +67,11 @@ class ViewController: UIViewController {
         case .brown: return "brown"
         case .black: return "black"
         }
+    }
+    
+    func setLabels() {
+        setTextColors(label: wordLabel)
+        setTextColors(label: colorLabel)
     }
 
 }
