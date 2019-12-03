@@ -13,6 +13,7 @@
 		CF1152FD23860C1300F8C822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1152FC23860C1300F8C822 /* Assets.xcassets */; };
 		CF11530023860C1300F8C822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1152FE23860C1300F8C822 /* LaunchScreen.storyboard */; };
 		CFFDCDC22394A2A100C5F8D5 /* UIColorAsRawValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFDCDC12394A2A100C5F8D5 /* UIColorAsRawValue.swift */; };
+		CFFDCDC423960D2500C5F8D5 /* UIColorToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFDCDC323960D2500C5F8D5 /* UIColorToString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CF1152FF23860C1300F8C822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF11530123860C1300F8C822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFFDCDC12394A2A100C5F8D5 /* UIColorAsRawValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorAsRawValue.swift; sourceTree = "<group>"; };
+		CFFDCDC323960D2500C5F8D5 /* UIColorToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorToString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				CF1152FE23860C1300F8C822 /* LaunchScreen.storyboard */,
 				CF11530123860C1300F8C822 /* Info.plist */,
 				CFFDCDC12394A2A100C5F8D5 /* UIColorAsRawValue.swift */,
+				CFFDCDC323960D2500C5F8D5 /* UIColorToString.swift */,
 			);
 			path = colorMatching;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				CF1152F823860C0E00F8C822 /* ViewController.swift in Sources */,
 				CFFDCDC22394A2A100C5F8D5 /* UIColorAsRawValue.swift in Sources */,
 				CF1152F623860C0E00F8C822 /* AppDelegate.swift in Sources */,
+				CFFDCDC423960D2500C5F8D5 /* UIColorToString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
