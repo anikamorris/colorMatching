@@ -24,8 +24,8 @@
 		CF1152FC23860C1300F8C822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF1152FF23860C1300F8C822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF11530123860C1300F8C822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFFDCDC12394A2A100C5F8D5 /* UIColorAsRawValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorAsRawValue.swift; sourceTree = "<group>"; };
-		CFFDCDC323960D2500C5F8D5 /* UIColorToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorToString.swift; sourceTree = "<group>"; };
+		CFFDCDC12394A2A100C5F8D5 /* UIColorAsRawValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIColorAsRawValue.swift; path = ../UIColorAsRawValue.swift; sourceTree = "<group>"; };
+		CFFDCDC323960D2500C5F8D5 /* UIColorToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIColorToString.swift; path = ../UIColorToString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +58,24 @@
 		CF1152F423860C0E00F8C822 /* colorMatching */ = {
 			isa = PBXGroup;
 			children = (
+				CFFDCDC5239DBD6200C5F8D5 /* Extensions */,
 				CF1152F523860C0E00F8C822 /* AppDelegate.swift */,
 				CF1152F723860C0E00F8C822 /* ViewController.swift */,
 				CF1152F923860C0E00F8C822 /* Main.storyboard */,
 				CF1152FC23860C1300F8C822 /* Assets.xcassets */,
 				CF1152FE23860C1300F8C822 /* LaunchScreen.storyboard */,
 				CF11530123860C1300F8C822 /* Info.plist */,
+			);
+			path = colorMatching;
+			sourceTree = "<group>";
+		};
+		CFFDCDC5239DBD6200C5F8D5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
 				CFFDCDC12394A2A100C5F8D5 /* UIColorAsRawValue.swift */,
 				CFFDCDC323960D2500C5F8D5 /* UIColorToString.swift */,
 			);
-			path = colorMatching;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

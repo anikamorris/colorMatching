@@ -10,13 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var colorLabel: UILabel!
     @IBOutlet weak var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
+    
+    @IBOutlet weak var timeBarButtonItem: UIBarButtonItem!
+    @IBOutlet weak var scoreNavigationItem: UINavigationItem!
+    @IBOutlet weak var playBarButtonItem: UIBarButtonItem!
     
     var score: Int = 0
     var counter: Int = 59
@@ -35,26 +36,42 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        // Playing with background gradients
+//        let gradientLayer = CAGradientLayer()
+//        gradientLayer.frame = self.view.bounds
+//        gradientLayer.colors = [UIColor.magenta.cgColor,
+//                                UIColor.cyan.cgColor]
+//
+//        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
         wordLabel.clipsToBounds = true
         colorLabel.clipsToBounds = true
+        
         wordLabel.layer.cornerRadius = 10.0
         colorLabel.layer.cornerRadius = 10.0
+        
         yesButton.layer.cornerRadius = 5.0
         noButton.layer.cornerRadius = 5.0
-        timeLabel.text = "Time: 1:00"
+        
+        timeBarButtonItem.title = "Time: 1:00"
         
         setLabels()
-        
+
+    }
+    
+    func runTimer() {
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
     }
     
     @objc func updateCounter() {
         //example functionality
         if counter >= 10 {
-            timeLabel.text = "Time: 0:\(counter)"
+            timeBarButtonItem.title = "Time: 0:\(counter)"
+            // timeLabel.text = "Time: 0:\(counter)"
             counter -= 1
         } else if counter >= 0 {
-            timeLabel.text = "Time: 0:0\(counter)"
+            timeBarButtonItem.title = "Time: 0:0\(counter)"
+            // timeLabel.text = "Time: 0:0\(counter)"
             counter -= 1
         }
     }
@@ -79,9 +96,11 @@ class ViewController: UIViewController {
         setLabels()
     }
     
-    @IBAction func pauseButtonTapped(_ sender: Any) {
-        
+    @IBAction func playButtonTapped(_ sender: Any) {
+        self.navigationController?.navigationBar
+        runTimer()
     }
+    
     
     func setTextColors(label: UILabel) {
         // Get a random color
@@ -114,7 +133,8 @@ class ViewController: UIViewController {
     func setLabels() {
         setTextColors(label: wordLabel)
         setTextColors(label: colorLabel)
-        scoreLabel.text = "Score: \(score)"
+        scoreNavigationItem.title = "Score: \(score)"
+        // scoreLabel.text = "Score: \(score)"
     }
     
     func colorMatches() -> Bool {
