@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     
     var score: Int = 0
     var counter: Int = 59
+    var starting: Bool = true
+    var playing: Bool = false
     
     enum Color: CaseIterable {
         case red
@@ -78,27 +80,39 @@ class ViewController: UIViewController {
 
     @IBAction func yesButtonTapped(_ sender: Any) {
         // color1 in wordLabel matches color2 in colorLabel
-        if colorMatches() {
-            score += 10
-        } else {
-            score -= 10
+        if playing {
+            if colorMatches() {
+                score += 10
+            } else {
+                score -= 10
+            }
+            setLabels()
         }
-        setLabels()
     }
     
     @IBAction func noButtonTapped(_ sender: Any) {
         // color1 in wordLabel doesn't match color2 in colorLabel
-        if !(colorMatches()) {
-            score += 10
-        } else {
-            score -= 10
+        if playing {
+            if !(colorMatches()) {
+                score += 10
+            } else {
+                score -= 10
+            }
+            setLabels()
         }
-        setLabels()
     }
     
     @IBAction func playButtonTapped(_ sender: Any) {
-        self.navigationController?.navigationBar
-        runTimer()
+        if starting {
+            starting = false
+            runTimer()
+        }
+        
+        if playing {
+            playing = false
+        } else {
+            playing = true
+        }
     }
     
     

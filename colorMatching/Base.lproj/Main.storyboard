@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Does the word on the top describe the color of the word on the bottom?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaE-3B-IZH">
-                                <rect key="frame" x="15" y="81" width="345" height="65"/>
+                                <rect key="frame" x="15" y="76" width="345" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="aHa-j0-bZU"/>
+                                    <constraint firstAttribute="height" constant="80" id="aHa-j0-bZU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -83,7 +83,7 @@
                             <constraint firstItem="ndY-g5-qCk" firstAttribute="height" secondItem="gHs-rO-AA1" secondAttribute="height" id="WpM-3b-9lj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gHs-rO-AA1" secondAttribute="trailing" constant="7" id="Z8N-Xw-59p"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BMJ-uJ-Zo2" secondAttribute="trailing" constant="50" id="bSk-0x-UvM"/>
-                            <constraint firstItem="BMJ-uJ-Zo2" firstAttribute="top" secondItem="NaE-3B-IZH" secondAttribute="bottom" constant="130" id="kFj-01-GaU"/>
+                            <constraint firstItem="BMJ-uJ-Zo2" firstAttribute="top" secondItem="NaE-3B-IZH" secondAttribute="bottom" constant="120" id="kFj-01-GaU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ndY-g5-qCk" secondAttribute="bottom" constant="10" id="lpa-2R-6Mw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gHs-rO-AA1" secondAttribute="bottom" constant="10" id="sEZ-zC-BfU"/>
                             <constraint firstItem="ndY-g5-qCk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="7" id="vah-V1-RhZ"/>
@@ -93,7 +93,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Score: 0" id="smu-lH-P0K">
                         <barButtonItem key="leftBarButtonItem" title="Time: 1:00" id="Gop-rj-Eoz"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="cq0-em-ADe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="cq0-em-ADe">
                             <connections>
                                 <action selector="playButtonTapped:" destination="BYZ-38-t0r" id="kpz-Tv-WG9"/>
                             </connections>
