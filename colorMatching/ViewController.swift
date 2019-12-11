@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var playBarButtonItem: UIBarButtonItem!
     
     var score: Int = 0
-    var counter: Int = 59
+    var counter: Int = 10
     var starting: Bool = true
     var playing: Bool = false
     
@@ -61,6 +61,7 @@ class ViewController: UIViewController {
 
     }
     
+    
     func runTimer() {
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
     }
@@ -80,7 +81,7 @@ class ViewController: UIViewController {
 
     @IBAction func yesButtonTapped(_ sender: Any) {
         // color1 in wordLabel matches color2 in colorLabel
-        if playing {
+        if playing && counter >= 0 {
             if colorMatches() {
                 score += 10
             } else {
@@ -92,7 +93,7 @@ class ViewController: UIViewController {
     
     @IBAction func noButtonTapped(_ sender: Any) {
         // color1 in wordLabel doesn't match color2 in colorLabel
-        if playing {
+        if playing && counter >= 0 {
             if !(colorMatches()) {
                 score += 10
             } else {
@@ -112,6 +113,15 @@ class ViewController: UIViewController {
             playing = false
         } else {
             playing = true
+        }
+        
+        if timeBarButtonItem.title == "Time: 0:00" {
+            timeBarButtonItem.title = "Time: 1:00"
+            playing = true
+            counter = 59
+            score = 0
+            setLabels()
+            runTimer()
         }
     }
     
